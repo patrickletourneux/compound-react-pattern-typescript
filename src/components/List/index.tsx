@@ -3,7 +3,7 @@
 import { useContext} from "react";
 import { FlyOutContext } from "components/FlyOut";
 
-
+import './style.css';
 interface ListProps {
     children ?: JSX.Element | JSX.Element[],
 }
@@ -12,7 +12,7 @@ interface ListProps {
 function List({ children } : ListProps) {
     const { open } = useContext(FlyOutContext);
     if (open){
-        return <ul>List {children}</ul>
+        return <ul className="List">List {children}</ul>
     }
     else return <></>;
 }

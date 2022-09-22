@@ -17,13 +17,15 @@ interface FlyOutProps {
 }
 
 function FlyOut(props : FlyOutProps) {
-  const [open, toggle] = useState<true | false> (true);
+  const [open, toggle] = useState(true);
 
   const providerValue = { open, toggle };
 
   return (
     <FlyOutContext.Provider value={providerValue}>
-      FlyOut
+      <h1>
+      {open ? 'open' : 'close'}
+      </h1>
       {props.children}
     </FlyOutContext.Provider>
   );

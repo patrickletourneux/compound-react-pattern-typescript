@@ -7,7 +7,6 @@ function Toggle() {
   
     return (
       <div onClick={() => toggle(!open)}>
-        Toggle
         <button>toggle</button>
       </div>
     );
